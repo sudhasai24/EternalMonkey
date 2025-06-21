@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eternal monk(ey) - Poetry Collection</title>
+    <meta name="description" content="A contemplative collection of poetry exploring nature, wisdom, and the inner journey of the soul.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Mobile menu toggle -->
+        <button class="nav-toggle" id="navToggle">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+
+        <nav class="navigation" id="navigation">
+            <div class="nav-content">
+                <button class="nav-collapse-btn" id="navCollapseBtn">
+                    <span class="collapse-icon">←</span>
+                </button>
+                
+                <div class="header">
+                    <h1 class="title">eternal monk(ey)</h1>
+                    <p class="subtitle">A collection of contemplative verse</p>
+                </div>
+                
+                <div class="nav-sections">
+                    <h2 class="nav-title">Sections</h2>
+                    <button class="nav-button active" data-section="nature">
+                        <span class="nav-icon">🌲</span>
+                        <span class="nav-text">Nature & Solitude</span>
+                    </button>
+                    <button class="nav-button" data-section="contemplation">
+                        <span class="nav-icon">🧘</span>
+                        <span class="nav-text">Contemplation</span>
+                    </button>
+                    <button class="nav-button" data-section="journey">
+                        <span class="nav-icon">🛤️</span>
+                        <span class="nav-text">Inner Journey</span>
+                    </button>
+                    <button class="nav-button" data-section="wisdom">
+                        <span class="nav-icon">📿</span>
+                        <span class="nav-text">Ancient Wisdom</span>
+                    </button>
+                    <button class="nav-button" data-section="seasons">
+                        <span class="nav-icon">🍂</span>
+                        <span class="nav-text">Seasons of Life</span>
+                    </button>
+                </div>
+                
+                <div class="nav-footer">
+                    <p>Click any poem tile to expand</p>
+                    <p>Scroll to explore sections</p>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content" id="mainContent">
+            <section id="nature" class="poem-section active">
+                <div class="section-header">
+                    <span class="section-icon">🌲</span>
+                    <h2 class="section-title">Nature & Solitude</h2>
+                </div>
+                <div class="poems-grid" id="nature-poems"></div>
+            </section>
+
+            <section id="contemplation" class="poem-section">
+                <div class="section-header">
+                    <span class="section-icon">🧘</span>
+                    <h2 class="section-title">Contemplation</h2>
+                </div>
+                <div class="poems-grid" id="contemplation-poems"></div>
+            </section>
+
+            <section id="journey" class="poem-section">
+                <div class="section-header">
+                    <span class="section-icon">🛤️</span>
+                    <h2 class="section-title">Inner Journey</h2>
+                </div>
+                <div class="poems-grid" id="journey-poems"></div>
+            </section>
+
+            <section id="wisdom" class="poem-section">
+                <div class="section-header">
+                    <span class="section-icon">📿</span>
+                    <h2 class="section-title">Ancient Wisdom</h2>
+                </div>
+                <div class="poems-grid" id="wisdom-poems"></div>
+            </section>
+
+            <section id="seasons" class="poem-section">
+                <div class="section-header">
+                    <span class="section-icon">🍂</span>
+                    <h2 class="section-title">Seasons of Life</h2>
+                </div>
+                <div class="poems-grid" id="seasons-poems"></div>
+            </section>
+        </main>
+
+        <!-- Background decoration -->
+        <div class="bg-decoration">
+            <div class="bg-circle bg-circle-1"></div>
+            <div class="bg-circle bg-circle-2"></div>
+        </div>
+    </div>
+
+    <!-- Comment Modal -->
+    <div class="modal-overlay" id="commentModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Leave a Comment</h3>
+                <button class="modal-close" id="closeCommentModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="commenterName">Your Name</label>
+                    <input type="text" id="commenterName" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="commentText">Comment</label>
+                    <textarea id="commentText" placeholder="Share your thoughts about this poem..."></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary" id="cancelComment">Cancel</button>
+                    <button class="btn btn-primary" id="submitComment">Submit Comment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
